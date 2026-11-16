@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="About AIHARA Technologies: an independent technology company building digital products, interactive experiences, and intelligent systems.">
+<meta property="og:title" content="AIHARA® Technologies: Company">
+<meta property="og:description" content="We build the future, one idea at a time. Software, interactive entertainment, and intelligent technology.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aiharatech.com">
+<title>AIHARA® Technologies: Company</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111318'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='36' font-weight='700' fill='%23F4F3EF' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --obsidian:#111318; --graphite:#252A32; --charcoal:#191C22; --silver:#D9DCE1; --ivory:#F4F3EF; --steel:#8C9BAA;
+  --ink:#111318; --line-dark:rgba(217,220,225,.16); --line-light:rgba(17,19,24,.14);
+  --font:"Archivo",system-ui,sans-serif; --mono:"IBM Plex Mono",monospace; --jp:"Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} html:focus-within{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);background:var(--obsidian);color:var(--ivory);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit} button,input,select,textarea{font:inherit}
+::selection{background:var(--ivory);color:var(--obsidian)}
+:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+main{transition:opacity .18s ease}
+main.pjax-out{opacity:0}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 clamp(18px,4vw,56px);height:72px;border-bottom:1px solid transparent;transition:background .35s,border-color .35s,backdrop-filter .35s}
+.nav.scrolled{background:rgba(17,19,24,.88);backdrop-filter:blur(14px);border-color:var(--line-dark)}
+.logo{font-weight:900;letter-spacing:.06em;font-size:20px;text-decoration:none;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.logo sup{font-size:9px;font-weight:500}
+.logo .jp{font-family:var(--jp);font-size:11px;font-weight:500;color:var(--steel);letter-spacing:.35em}
+.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links a{text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--silver);padding:10px 2px;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:4px;height:1px;width:0;background:var(--ivory);transition:width .3s}
+.nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+.nav-links a.active{color:#fff}.nav-links a.active::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid var(--line-dark)}
+.lang button{background:transparent;border:0;color:var(--steel);font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:9px 12px;min-height:36px;cursor:pointer}
+.lang button.active{background:var(--ivory);color:var(--obsidian);font-weight:700}
+.burger{display:none;background:transparent;border:1px solid var(--line-dark);color:var(--ivory);width:44px;height:44px;cursor:pointer;font-size:18px;line-height:1}
+.mobile-menu{display:none;background:var(--charcoal);border-bottom:1px solid var(--line-dark);padding:10px clamp(18px,4vw,56px) 22px;position:fixed;top:72px;left:0;right:0;z-index:59}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:14px 0;text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.18em;border-bottom:1px solid var(--line-dark)}
+.mobile-menu a.active{color:#fff}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px clamp(18px,4vw,56px) 0;overflow:hidden;background:radial-gradient(1100px 600px at 78% 30%,#232833 0%,var(--obsidian) 55%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(217,220,225,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(217,220,225,.045) 1px,transparent 1px);background-size:72px 72px;pointer-events:none}
+.hero-vert{position:absolute;right:clamp(10px,2vw,28px);top:110px;writing-mode:vertical-rl;font-family:var(--jp);letter-spacing:.5em;font-size:12px;color:rgba(140,155,170,.75)}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:end;width:100%;max-width:1440px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;color:var(--steel);display:flex;align-items:center;gap:14px;margin:0 0 26px}
+.eyebrow::before{content:"";width:42px;height:1px;background:var(--steel)}
+h1{font-size:clamp(44px,7.2vw,104px);line-height:.96;letter-spacing:-.02em;font-weight:800;margin:0;text-transform:uppercase}
+h1 .thin{font-weight:400;color:var(--silver)}
+h1 .outline{color:transparent;-webkit-text-stroke:1.5px var(--ivory)}
+.hero-sub{margin:28px 0 0;max-width:520px;font-size:clamp(16px,1.6vw,19px);line-height:1.65;color:#B9BEC7;font-weight:400}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;padding-bottom:54px}
+.btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.16em;padding:16px 22px;min-height:52px;border:1px solid var(--ivory);transition:.25s}
+.btn.solid{background:var(--ivory);color:var(--obsidian);font-weight:700}
+.btn.solid:hover{background:#fff;transform:translateY(-2px)}
+.btn.ghost{color:var(--ivory);background:transparent}
+.btn.ghost:hover{background:rgba(244,243,239,.08);transform:translateY(-2px)}
+/* sculpture */
+.sculpt{position:relative;height:520px}
+.sculpt .base{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);width:340px;height:22px;background:linear-gradient(180deg,#3A414D,#171A20);border:1px solid rgba(217,220,225,.25)}
+.sculpt .plinth{position:absolute;left:50%;bottom:66px;transform:translateX(-50%);width:230px;height:14px;background:linear-gradient(90deg,#2B313B,#454E5C,#2B313B)}
+.orb{position:absolute;left:50%;top:36px;transform:translateX(-50%);width:210px;height:210px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#FFFFFF 0%,#D9DCE1 22%,#8C9BAA 48%,#3C434E 72%,#14161B 100%);box-shadow:0 40px 80px rgba(0,0,0,.6),inset -18px -24px 50px rgba(0,0,0,.55);animation:floaty 7s ease-in-out infinite}
+.ring{position:absolute;left:50%;top:96px;width:330px;height:330px;margin-left:-165px;border:1px solid rgba(217,220,225,.5);border-radius:50%;transform:rotateX(68deg) rotateZ(-18deg)}
+.ring.r2{width:400px;height:400px;margin-left:-200px;top:64px;border-color:rgba(140,155,170,.35);transform:rotateX(72deg) rotateZ(14deg)}
+.cube{position:absolute;right:8%;bottom:120px;width:92px;height:92px;background:linear-gradient(135deg,#E8EAED 0%,#9AA5B1 45%,#39404B 100%);transform:rotate(18deg);box-shadow:18px 24px 40px rgba(0,0,0,.5)}
+.prism{position:absolute;left:4%;bottom:170px;width:0;height:0;border-left:44px solid transparent;border-right:44px solid transparent;border-bottom:120px solid #6E7B8A;filter:drop-shadow(10px 18px 22px rgba(0,0,0,.5));opacity:.9}
+.beam{position:absolute;left:50%;top:0;width:1px;height:100%;background:linear-gradient(180deg,transparent,rgba(217,220,225,.35),transparent)}
+.sculpt .coords{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--steel)}
+@keyframes floaty{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-14px)}}
+.hero-foot{position:relative;border-top:1px solid var(--line-dark);margin-top:10px}
+.hero-foot-in{max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 34px;padding:18px 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:var(--steel)}
+.hero-foot-in b{color:var(--ivory);font-weight:500}
+
+/* MARQUEE */
+.marquee{background:var(--ivory);color:var(--obsidian);overflow:hidden;border-block:1px solid var(--obsidian)}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scrollx 26s linear infinite;padding:14px 0}
+.marquee span{font-weight:800;letter-spacing:.08em;font-size:15px;white-space:nowrap;padding-right:18px}
+.marquee .dot{color:#8C9BAA}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:clamp(76px,10vw,140px) clamp(18px,4vw,56px)}
+.subpage .section{padding-top:calc(clamp(76px,10vw,140px) + 26px)}
+.wrap{max-width:1440px;margin:0 auto}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.28em;display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.label::after{content:"";flex:1;height:1px}
+.light{background:var(--ivory);color:var(--ink)} .light .label{color:#5B6672}.light .label::after{background:var(--line-light)}
+.dark{background:var(--charcoal)} .dark .label{color:var(--steel)}.dark .label::after{background:var(--line-dark)}
+h2{font-size:clamp(36px,5.4vw,72px);line-height:1.02;letter-spacing:-.02em;font-weight:800;margin:0;text-transform:uppercase}
+.lede{font-size:clamp(16px,1.5vw,19px);line-height:1.7;max-width:640px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* DIRECTORY (home) */
+.dir-list{margin-top:52px;border-top:1px solid var(--line-light)}
+.dir-row{display:grid;grid-template-columns:70px 1fr auto;gap:22px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line-light);text-decoration:none;transition:background .3s,padding-left .3s}
+.dir-row:hover{background:rgba(17,19,24,.03);padding-left:16px}
+.dir-row .idx{font-family:var(--mono);color:#5B6672;font-size:13px}
+.dir-t{display:block;font-size:clamp(21px,2.6vw,32px);font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+.dir-d{display:block;margin-top:6px;color:#4A525E;line-height:1.6;font-size:15.5px;max-width:640px}
+.dir-row .arr{font-size:22px;color:#5B6672;transition:transform .3s}
+.dir-row:hover .arr{transform:translateX(5px)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,80px);margin-top:54px;align-items:start}
+.about-copy p{font-size:17px;line-height:1.8;color:#343A44;margin:0 0 20px;max-width:600px}
+.about-copy p:first-child{font-size:20px;color:var(--ink)}
+.principles{margin-top:36px;border-top:1px solid var(--line-light)}
+.principles div{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line-light);font-family:var(--mono);font-size:12px;letter-spacing:.14em}
+.principles div span:last-child{color:#6B7582}
+.arch{position:relative;height:460px;background:var(--obsidian);overflow:hidden}
+.arch .sun{position:absolute;right:52px;top:52px;width:96px;height:96px;border-radius:50%;background:var(--ivory)}
+.arch .b1{position:absolute;left:0;bottom:0;width:46%;height:64%;background:#252A32}
+.arch .b2{position:absolute;left:38%;bottom:0;width:34%;height:82%;background:#191C22;border-left:1px solid rgba(217,220,225,.3)}
+.arch .b3{position:absolute;right:0;bottom:0;width:22%;height:48%;background:#39404B}
+.arch .win{position:absolute;background:rgba(244,243,239,.85)}
+.arch .cap{position:absolute;left:18px;top:16px;font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--steel)}
+.arch .jpmark{position:absolute;right:14px;bottom:12px;writing-mode:vertical-rl;font-family:var(--jp);color:rgba(244,243,239,.6);letter-spacing:.4em;font-size:11px}
+
+/* CAPABILITIES */
+.cap-list{margin-top:56px;border-top:1px solid var(--line-dark)}
+.cap{display:grid;grid-template-columns:70px 1fr auto;gap:22px;align-items:center;padding:30px 6px;border-bottom:1px solid var(--line-dark);transition:background .3s,padding-left .3s;cursor:default}
+.cap:hover{background:rgba(244,243,239,.03);padding-left:16px}
+.cap .idx{font-family:var(--mono);color:var(--steel);font-size:13px}
+.cap h3{margin:0 0 8px;font-size:clamp(21px,2.6vw,32px);letter-spacing:.01em;font-weight:700;text-transform:uppercase}
+.cap p{margin:0;color:#AEB5BF;line-height:1.65;max-width:640px;font-size:15.5px}
+.cap .icon{width:56px;height:56px;border:1px solid var(--line-dark);display:grid;place-items:center;color:var(--silver)}
+.cap:hover .icon{background:var(--ivory);color:var(--obsidian)}
+.cap .tags{grid-column:2;margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.cap .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;border:1px solid var(--line-dark);padding:6px 10px;color:var(--steel)}
+
+/* WORKS */
+.works-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+.work{border:1px solid var(--line-light);background:#fff;text-decoration:none;display:block;transition:transform .3s,box-shadow .3s}
+.work:hover{transform:translateY(-5px);box-shadow:0 22px 44px rgba(17,19,24,.12)}
+.work .visual{height:270px;position:relative;overflow:hidden}
+.work .meta{padding:22px}
+.work .meta .cat{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:#6B7582}
+.work .meta h3{margin:9px 0 7px;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.work .meta p{margin:0;color:#4A525E;line-height:1.6;font-size:15px}
+.badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--obsidian);color:var(--ivory);font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;padding:7px 10px}
+.v1{background:linear-gradient(135deg,#111318 55%,#252A32)} .v1::after{content:"";position:absolute;right:-30px;top:-30px;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#8C9BAA 55%,#252A32)}
+.v2{background:#191C22} .v2::after{content:"";position:absolute;left:50%;top:50%;width:110px;height:210px;transform:translate(-50%,-50%) rotate(-8deg);background:linear-gradient(160deg,#F4F3EF,#B9C0C9 60%,#6E7B8A);box-shadow:16px 20px 34px rgba(0,0,0,.45)}
+.v3{background:linear-gradient(160deg,#252A32,#111318)} .v3::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 26px,rgba(217,220,225,.14) 26px 27px),repeating-linear-gradient(90deg,transparent 0 26px,rgba(217,220,225,.14) 26px 27px)}
+.v3::before{content:"10";position:absolute;right:22px;bottom:2px;font-size:120px;font-weight:900;color:rgba(244,243,239,.14);z-index:1}
+.v4{background:#252A32} .v4::after{content:"";position:absolute;left:50%;top:50%;width:150px;height:150px;transform:translate(-50%,-50%);border-radius:50%;border:26px solid #8C9BAA;border-top-color:#F4F3EF;rotate:24deg}
+.v5{background:linear-gradient(180deg,#111318 70%,#39404B)} .v5::after{content:"";position:absolute;left:0;right:0;top:56%;height:1px;background:#D9DCE1;box-shadow:0 -34px 0 rgba(217,220,225,.4),0 34px 0 rgba(217,220,225,.4),0 -68px 0 rgba(217,220,225,.2),0 68px 0 rgba(217,220,225,.2)}
+.v6{background:#191C22} .v6::after{content:"";position:absolute;left:50%;top:50%;width:170px;height:170px;transform:translate(-50%,-50%) rotate(45deg);background:linear-gradient(135deg,#D9DCE1,#5B6672);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.works-note{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:#6B7582;line-height:1.7}
+
+/* TECH */
+.tech-grid{margin-top:54px;border-top:1px solid var(--line-dark)}
+.tech-row{display:grid;grid-template-columns:280px 1fr;gap:26px;padding:30px 0;border-bottom:1px solid var(--line-dark);align-items:baseline}
+.tech-row h3{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.26em;color:var(--steel);font-weight:500}
+.tech-items{font-size:clamp(22px,3.4vw,40px);font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.tech-items span{color:#59636F;margin:0 4px;font-weight:400}
+
+/* PHILOSOPHY */
+.philosophy{background:var(--obsidian);text-align:left;position:relative;overflow:hidden}
+.philosophy .big{font-size:clamp(46px,9vw,132px);line-height:.95;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;margin:0}
+.philosophy .big .o{color:transparent;-webkit-text-stroke:1.5px var(--ivory)}
+.philosophy p{max-width:560px;color:#B9BEC7;line-height:1.75;font-size:17px;margin:30px 0 0}
+.philosophy .jpbig{position:absolute;right:-10px;top:20px;font-family:var(--jp);font-size:clamp(90px,16vw,220px);font-weight:700;color:rgba(244,243,239,.05);line-height:1;pointer-events:none}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,80px);margin-top:50px;align-items:start}
+.cinfo{border-top:1px solid var(--line-light)}
+.cinfo div{padding:20px 0;border-bottom:1px solid var(--line-light)}
+.cinfo .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;color:#6B7582;margin-bottom:8px}
+.cinfo .v{font-size:18px;font-weight:600}
+.cinfo .v a{text-decoration:none;border-bottom:1px solid var(--ink)}
+.cinfo .note{font-size:12.5px;color:#6B7582;margin-top:5px;line-height:1.5}
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.socials a,.socials span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-decoration:none;border:1px solid var(--line-light);padding:11px 14px;min-height:40px;display:inline-flex;align-items:center}
+.socials a:hover{background:var(--obsidian);color:var(--ivory)}
+form{display:grid;gap:18px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label.fl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:#5B6672;margin-bottom:8px}
+input,select,textarea{width:100%;background:#fff;border:1px solid #C9CBC9;padding:14px 15px;font-size:15.5px;color:var(--ink);border-radius:0;min-height:50px}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--obsidian);outline-offset:1px;border-color:var(--obsidian)}
+.submit{background:var(--obsidian);color:var(--ivory);border:1px solid var(--obsidian);padding:17px 24px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;cursor:pointer;min-height:54px;display:inline-flex;align-items:center;gap:12px;justify-self:start;transition:.25s}
+.submit:hover{background:var(--graphite);transform:translateY(-2px)}
+.form-status{display:none;border:1px solid var(--line-light);background:#fff;padding:16px 18px;line-height:1.6;font-size:14.5px}
+.form-status.show{display:block}
+.form-status a{font-weight:700}
+
+/* FOOTER */
+footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-top:1px solid var(--line-dark)}
+.foot-in{max-width:1440px;margin:0 auto}
+.foot-logo{font-size:clamp(38px,7vw,84px);font-weight:900;letter-spacing:.02em;line-height:1}
+.foot-tag{font-family:var(--mono);letter-spacing:.3em;font-size:12px;color:var(--steel);margin-top:14px}
+.foot-links{display:flex;flex-wrap:wrap;gap:26px;margin:44px 0;padding:22px 0;border-block:1px solid var(--line-dark)}
+.foot-links a{text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--silver);padding:8px 0}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:#6E7885}
+
+@media(max-width:960px){
+  .nav-links{display:none}.burger{display:grid;place-items:center}
+  .hero-inner{grid-template-columns:1fr}.sculpt{height:380px}.orb{width:160px;height:160px}.ring{width:250px;height:250px;margin-left:-125px}.ring.r2{width:300px;height:300px;margin-left:-150px}
+  .about-grid,.contact-grid{grid-template-columns:1fr}.works-grid{grid-template-columns:1fr}
+  .tech-row{grid-template-columns:1fr;gap:10px}.cap{grid-template-columns:44px 1fr}.cap .icon{display:none}.cap .tags{grid-column:2}
+  .dir-row{grid-template-columns:44px 1fr auto}
+  .frow{grid-template-columns:1fr}.arch{height:340px}.hero-vert{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}.marquee-track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html" data-pjax data-nav="index" aria-label="AIHARA Technologies, home">AIHARA<sup>®</sup><span class="jp">相原</span></a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="company.html" data-pjax data-nav="company" data-i18n="nav_company">COMPANY</a>
+    <a href="capabilities.html" data-pjax data-nav="capabilities" data-i18n="nav_cap">CAPABILITIES</a>
+    <a href="work.html" data-pjax data-nav="work" data-i18n="nav_work">WORK</a>
+    <a href="technology.html" data-pjax data-nav="technology" data-i18n="nav_tech">TECHNOLOGY</a>
+    <a href="contact.html" data-pjax data-nav="contact" data-i18n="nav_contact">CONTACT</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btnEN" class="active" aria-pressed="true">EN</button>
+      <button type="button" id="btnID" aria-pressed="false">ID</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="company.html" data-pjax data-nav="company" data-i18n="nav_company">COMPANY</a>
+  <a href="capabilities.html" data-pjax data-nav="capabilities" data-i18n="nav_cap">CAPABILITIES</a>
+  <a href="work.html" data-pjax data-nav="work" data-i18n="nav_work">WORK</a>
+  <a href="technology.html" data-pjax data-nav="technology" data-i18n="nav_tech">TECHNOLOGY</a>
+  <a href="contact.html" data-pjax data-nav="contact" data-i18n="nav_contact">CONTACT</a>
+</div>
+
+<main data-pjax-root data-page="company" class="subpage">
+  <!-- ABOUT / COMPANY -->
+  <section class="section light">
+    <div class="wrap">
+      <p class="label reveal">01 / <span data-i18n="about_label">WHO WE ARE</span></p>
+      <h2 class="reveal" data-i18n="about_h">Technology<br>with purpose.</h2>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p data-i18n="about_p1">AIHARA Technologies is an independent technology company dedicated to transforming ideas into meaningful digital experiences.</p>
+          <p data-i18n="about_p2">We combine software engineering, creative thinking, and technological innovation to develop products and solutions that move businesses and people forward.</p>
+          <p data-i18n="about_p3">We are not just a software development company. AIHARA is a technology brand building digital products, interactive experiences, and intelligent systems, engineered with precision, designed with restraint.</p>
+          <div class="principles">
+            <div><span data-i18n="pr1">PRECISION</span><span>精密</span></div>
+            <div><span data-i18n="pr2">RESTRAINT</span><span>節制</span></div>
+            <div><span data-i18n="pr3">CRAFT</span><span>職人</span></div>
+            <div><span data-i18n="pr4">AMBITION</span><span>野心</span></div>
+          </div>
+        </div>
+        <div class="arch reveal" role="img" aria-label="Abstract architectural composition in black, graphite and ivory">
+          <span class="cap">FORM / STRUCTURE / LIGHT</span>
+          <div class="sun"></div><div class="b1"></div><div class="b2"></div><div class="b3"></div>
+          <div class="win" style="left:12%;bottom:38%;width:34px;height:10px"></div>
+          <div class="win" style="left:12%;bottom:52%;width:34px;height:10px"></div>
+          <div class="win" style="left:47%;bottom:60%;width:26px;height:10px"></div>
+          <div class="win" style="left:47%;bottom:72%;width:26px;height:10px"></div>
+          <span class="jpmark">建築と技術</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-logo">AIHARA<sup style="font-size:.25em;font-weight:500">®</sup> TECHNOLOGIES</div>
+    <div class="foot-tag">BEYOND DIGITAL BOUNDARIES.</div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="company.html" data-pjax data-i18n="nav_company">COMPANY</a>
+      <a href="capabilities.html" data-pjax data-i18n="nav_cap">CAPABILITIES</a>
+      <a href="work.html" data-pjax data-i18n="nav_work">WORK</a>
+      <a href="contact.html" data-pjax data-i18n="nav_contact">CONTACT</a>
+      <a href="https://aiharatech.com">AIHARATECH.COM</a>
+    </nav>
+    <div class="foot-bottom">
+      <span>© 2026 AIHARA TECHNOLOGIES. <span data-i18n="rights">ALL RIGHTS RESERVED.</span></span>
+      <span>相原テクノロジーズ · <span data-i18n="foot_made">DESIGNED &amp; ENGINEERED BY AIHARA</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var worksEN=[
+    {v:"v1",cat:"SOFTWARE PLATFORM · CONCEPTUAL STUDY",t:"Meridian Platform",d:"A modular operations platform concept: unified data, role-based workflows, and a quiet, editorial interface for complex teams."},
+    {v:"v2",cat:"MOBILE APPLICATION · CONCEPTUAL STUDY",t:"Kanso App",d:"A minimal productivity application concept built around one idea: fewer screens, clearer decisions, nothing decorative without purpose."},
+    {v:"v3",cat:"MOBILE GAME · CONCEPTUAL STUDY",t:"Tenfall & Number Play",d:"Original number-puzzle game concepts: precise mechanics, premium dark presentation, and progression systems designed for long sessions."},
+    {v:"v4",cat:"IOT PROJECT · CONCEPTUAL STUDY",t:"Sentinel IoT",d:"A connected-device concept using MQTT telemetry, live dashboards, and automated alerts for distributed environments."},
+    {v:"v5",cat:"NETWORK INFRASTRUCTURE · CONCEPTUAL STUDY",t:"Core Network Design",d:"A structured network infrastructure concept: segmented design, documented topology, and monitoring from day one."},
+    {v:"v6",cat:"EXPERIMENTAL TECHNOLOGY · CONCEPTUAL STUDY",t:"Lab 06: Experiments",d:"An internal R&D concept space for prototyping emerging interaction, automation, and interface ideas before they become products."}
+  ];
+  var worksID=[
+    {v:"v1",cat:"PLATFORM PERANGKAT LUNAK · STUDI KONSEPTUAL",t:"Meridian Platform",d:"Konsep platform operasional modular: data terpadu, alur kerja berbasis peran, dan antarmuka editorial yang tenang untuk tim yang kompleks."},
+    {v:"v2",cat:"APLIKASI MOBILE · STUDI KONSEPTUAL",t:"Kanso App",d:"Konsep aplikasi produktivitas minimal dengan satu gagasan: lebih sedikit layar, keputusan lebih jelas, tanpa dekorasi tanpa tujuan."},
+    {v:"v3",cat:"GAME MOBILE · STUDI KONSEPTUAL",t:"Tenfall & Number Play",d:"Konsep game puzzle angka orisinal: mekanik presisi, presentasi gelap premium, dan sistem progresi untuk sesi bermain panjang."},
+    {v:"v4",cat:"PROYEK IOT · STUDI KONSEPTUAL",t:"Sentinel IoT",d:"Konsep perangkat terhubung dengan telemetri MQTT, dashboard langsung, dan peringatan otomatis untuk lingkungan terdistribusi."},
+    {v:"v5",cat:"INFRASTRUKTUR JARINGAN · STUDI KONSEPTUAL",t:"Core Network Design",d:"Konsep infrastruktur jaringan terstruktur: desain tersegmentasi, topologi terdokumentasi, dan pemantauan sejak hari pertama."},
+    {v:"v6",cat:"TEKNOLOGI EKSPERIMENTAL · STUDI KONSEPTUAL",t:"Lab 06: Experiments",d:"Ruang konsep R&D internal untuk membuat prototipe interaksi, otomasi, dan gagasan antarmuka baru sebelum menjadi produk."}
+  ];
+  var I18N={
+    en:{nav_company:"COMPANY",nav_cap:"CAPABILITIES",nav_work:"WORK",nav_tech:"TECHNOLOGY",nav_contact:"CONTACT",
+      hero_eyebrow:"INDEPENDENT TECHNOLOGY COMPANY",hero_h1a:"We build",hero_h1b:"the future,",hero_h1c:"one idea",hero_h1d:"at a time.",
+      hero_sub:"Engineering digital experiences through software, interactive entertainment, and intelligent technology.",
+      cta_explore:"EXPLORE OUR CAPABILITIES",cta_talk:"LET'S TALK",hero_f1:"SOFTWARE · GAMES · SYSTEMS",hero_f2:"AIHARATECH.COM",
+      dir_label:"SITE INDEX",dir_h:"Explore.",
+      dir1_t:"Company",dir1_d:"Technology with purpose.",
+      dir2_t:"Capabilities",dir2_d:"Software, mobile, interactive entertainment, and IT systems.",
+      dir3_t:"Work",dir3_d:"Selected conceptual studies and product ideas.",
+      dir4_t:"Technology",dir4_d:"The stack behind the work.",
+      dir5_t:"Contact",dir5_d:"Start a project conversation.",
+      about_label:"WHO WE ARE",about_h:"Technology\nwith purpose.",
+      about_p1:"AIHARA Technologies is an independent technology company dedicated to transforming ideas into meaningful digital experiences.",
+      about_p2:"We combine software engineering, creative thinking, and technological innovation to develop products and solutions that move businesses and people forward.",
+      about_p3:"We are not just a software development company. AIHARA is a technology brand building digital products, interactive experiences, and intelligent systems, engineered with precision, designed with restraint.",
+      pr1:"PRECISION",pr2:"RESTRAINT",pr3:"CRAFT",pr4:"AMBITION",
+      cap_label:"WHAT WE DO",cap_h:"Our\ncapabilities.",
+      cap1_t:"Software Engineering",cap1_d:"Custom software, web platforms, backend systems, APIs, and enterprise applications, built to be maintained, scaled, and trusted.",
+      cap2_t:"Mobile & Digital Applications",cap2_d:"Modern mobile applications and digital products designed for usability, scalability, and performance on real devices.",
+      cap3_t:"Interactive Entertainment",cap3_d:"Mobile game development, interactive experiences, and original digital entertainment products with a distinct identity.",
+      cap4_t:"IT Systems & Infrastructure",cap4_d:"IT consulting, network infrastructure, cloud systems, cybersecurity, and technical support for organisations that depend on their systems.",
+      work_label:"SELECTED WORKS",work_h:"Ideas into\nreality.",work_note:"NOTE: The works above are conceptual studies that show the kinds of products AIHARA designs and builds. They are not presented as client work or commercial releases.",
+      tech_label:"TECHNOLOGY",tech_h:"Engineered\nwith precision.",tech1:"SOFTWARE",tech2:"MOBILE",tech3:"INFRASTRUCTURE",tech4:"EMERGING TECHNOLOGY",
+      phil_label:"PHILOSOPHY",phil_a:"Think beyond.",phil_b:"Build beyond.",phil_p:"Innovation is not simply what we create. It is how we think, how we engineer, and how we shape what comes next.",
+      contact_label:"CONTACT",contact_h:"Let's create\nwhat's next.",contact_sub:"Have an idea, a challenge, or a vision? Let's build something meaningful together.",
+      c_email:"BUSINESS EMAIL",c_email_note:"Placeholder address. Replace with the active business inbox before launch.",c_li_note:"Placeholder link. Connect the official company page before launch.",
+      c_social:"SOCIAL",c_social_note:"Placeholder profiles. Official accounts to be linked at launch.",c_resp:"RESPONSE",c_resp_v:"Tell us what you are building, your timeline, and what success looks like. The more precise the brief, the more precise the reply.",
+      f_name:"YOUR NAME *",f_email:"EMAIL *",f_company:"COMPANY",f_type:"PROJECT TYPE",f_msg:"ABOUT YOUR PROJECT *",f_send:"SEND INQUIRY",
+      o1:"Software Engineering",o2:"Mobile Application",o3:"Mobile Game / Interactive",o4:"IT Systems & Infrastructure",o5:"Other",
+      rights:"ALL RIGHTS RESERVED.",foot_made:"DESIGNED & ENGINEERED BY AIHARA",badge:"CONCEPT"},
+    id:{nav_company:"PERUSAHAAN",nav_cap:"KEMAMPUAN",nav_work:"KARYA",nav_tech:"TEKNOLOGI",nav_contact:"KONTAK",
+      hero_eyebrow:"PERUSAHAAN TEKNOLOGI INDEPENDEN",hero_h1a:"Kami membangun",hero_h1b:"masa depan,",hero_h1c:"satu gagasan",hero_h1d:"dalam satu waktu.",
+      hero_sub:"Merekayasa pengalaman digital melalui perangkat lunak, hiburan interaktif, dan teknologi cerdas.",
+      cta_explore:"JELAJAHI KEMAMPUAN KAMI",cta_talk:"MARI BICARA",hero_f1:"PERANGKAT LUNAK · GAME · SISTEM",hero_f2:"AIHARATECH.COM",
+      dir_label:"INDEKS SITUS",dir_h:"Jelajahi.",
+      dir1_t:"Perusahaan",dir1_d:"Teknologi dengan tujuan.",
+      dir2_t:"Kemampuan",dir2_d:"Perangkat lunak, mobile, hiburan interaktif, dan sistem TI.",
+      dir3_t:"Karya",dir3_d:"Studi konseptual dan gagasan produk pilihan.",
+      dir4_t:"Teknologi",dir4_d:"Teknologi di balik karya.",
+      dir5_t:"Kontak",dir5_d:"Mulai percakapan proyek.",
+      about_label:"SIAPA KAMI",about_h:"Teknologi\ndengan tujuan.",
+      about_p1:"AIHARA Technologies adalah perusahaan teknologi independen yang berdedikasi mengubah gagasan menjadi pengalaman digital yang bermakna.",
+      about_p2:"Kami memadukan rekayasa perangkat lunak, pemikiran kreatif, dan inovasi teknologi untuk mengembangkan produk dan solusi yang menggerakkan bisnis dan manusia ke depan.",
+      about_p3:"Kami bukan sekadar perusahaan pengembangan perangkat lunak. AIHARA adalah merek teknologi yang membangun produk digital, pengalaman interaktif, dan sistem cerdas, direkayasa dengan presisi, dirancang dengan pengendalian diri.",
+      pr1:"PRESISI",pr2:"PENGENDALIAN DIRI",pr3:"KEAHLIAN",pr4:"AMBISI",
+      cap_label:"APA YANG KAMI LAKUKAN",cap_h:"Kemampuan\nkami.",
+      cap1_t:"Rekayasa Perangkat Lunak",cap1_d:"Perangkat lunak khusus, platform web, sistem backend, API, dan aplikasi enterprise, dibangun agar mudah dirawat, diskalakan, dan dipercaya.",
+      cap2_t:"Aplikasi Mobile & Digital",cap2_d:"Aplikasi mobile modern dan produk digital yang dirancang untuk kemudahan penggunaan, skalabilitas, dan performa di perangkat nyata.",
+      cap3_t:"Hiburan Interaktif",cap3_d:"Pengembangan game mobile, pengalaman interaktif, dan produk hiburan digital orisinal dengan identitas yang khas.",
+      cap4_t:"Sistem & Infrastruktur TI",cap4_d:"Konsultasi TI, infrastruktur jaringan, sistem cloud, keamanan siber, dan dukungan teknis untuk organisasi yang bergantung pada sistemnya.",
+      work_label:"KARYA PILIHAN",work_h:"Gagasan menjadi\nnyata.",work_note:"CATATAN: Karya di atas adalah studi konseptual yang menunjukkan jenis produk yang dirancang dan dibangun AIHARA. Karya ini tidak disajikan sebagai pekerjaan klien atau rilis komersial.",
+      tech_label:"TEKNOLOGI",tech_h:"Direkayasa\ndengan presisi.",tech1:"PERANGKAT LUNAK",tech2:"MOBILE",tech3:"INFRASTRUKTUR",tech4:"TEKNOLOGI BARU",
+      phil_label:"FILOSOFI",phil_a:"Berpikir melampaui.",phil_b:"Membangun melampaui.",phil_p:"Inovasi bukan sekadar apa yang kami ciptakan. Inovasi adalah cara kami berpikir, cara kami merekayasa, dan cara kami membentuk masa depan.",
+      contact_label:"KONTAK",contact_h:"Mari ciptakan\nyang berikutnya.",contact_sub:"Punya gagasan, tantangan, atau visi? Mari bangun sesuatu yang bermakna bersama.",
+      c_email:"EMAIL BISNIS",c_email_note:"Alamat placeholder. Ganti dengan inbox bisnis aktif sebelum peluncuran.",c_li_note:"Tautan placeholder. Hubungkan halaman resmi perusahaan sebelum peluncuran.",
+      c_social:"SOSIAL",c_social_note:"Profil placeholder. Akun resmi akan ditautkan saat peluncuran.",c_resp:"RESPONS",c_resp_v:"Ceritakan apa yang Anda bangun, linimasanya, dan seperti apa keberhasilan menurut Anda. Semakin presisi brief-nya, semakin presisi balasannya.",
+      f_name:"NAMA ANDA *",f_email:"EMAIL *",f_company:"PERUSAHAAN",f_type:"JENIS PROYEK",f_msg:"TENTANG PROYEK ANDA *",f_send:"KIRIM PERTANYAAN",
+      o1:"Rekayasa Perangkat Lunak",o2:"Aplikasi Mobile",o3:"Game Mobile / Interaktif",o4:"Sistem & Infrastruktur TI",o5:"Lainnya",
+      rights:"SELURUH HAK CIPTA DILINDUNGI.",foot_made:"DIRANCANG & DIREKAYASA OLEH AIHARA",badge:"KONSEP"}
+  };
+
+  /* PJAX router: one full HTML file per page, all at the project root
+     next to index.html (company.html, capabilities.html, work.html,
+     technology.html, contact.html), swapped without a reload.
+     URLs stay clean (no hash, no folder prefix). Back and forward
+     buttons are honoured, and every page also opens directly. */
+  var PAGES={index:"index.html",company:"company.html",capabilities:"capabilities.html",work:"work.html",technology:"technology.html",contact:"contact.html"};
+  var main=document.querySelector("main[data-pjax-root]");
+  var currentPage=main.getAttribute("data-page")||"index";
+  var lang="en";
+  var reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var BASE=(function(){
+    var u=new URL(location.href);
+    var path=u.pathname;
+    var assetsAt=path.indexOf("/assets/");
+    if(assetsAt>=0){ path=path.slice(0,assetsAt+1); }
+    else if(path.charAt(path.length-1)!=="/"){
+      var seg=path.split("/").pop()||"";
+      var key=seg.replace(/\.html$/,"");
+      if(seg.indexOf(".")>=0||PAGES[key]){ path=path.slice(0,path.length-seg.length); }
+      else { path=path+"/"; }
+    }
+    u.pathname=path; u.hash=""; u.search="";
+    return u.href;
+  })();
+
+  function renderWorks(){
+    var grid=document.getElementById("worksGrid");
+    if(!grid) return;
+    var list = lang==="id"?worksID:worksEN;
+    grid.innerHTML = list.map(function(w){
+      return '<article class="work reveal in"><div class="visual '+w.v+'"><span class="badge">'+I18N[lang].badge+'</span></div><div class="meta"><div class="cat">'+w.cat+'</div><h3>'+w.t+'</h3><p>'+w.d+'</p></div></article>';
+    }).join("");
+  }
+  function renderMarquee(){
+    var track=document.getElementById("marqueeTrack");
+    if(!track) return;
+    var phrase = lang==="id" ? "MELAMPAUI BATAS DIGITAL" : "BEYOND DIGITAL BOUNDARIES";
+    var chunk=""; for(var i=0;i<6;i++){ chunk+="<span>"+phrase+"</span><span class='dot'>◆</span>"; }
+    track.innerHTML=chunk+chunk;
+  }
+  function setLang(l){
+    lang=l; document.documentElement.lang = l==="id"?"id":"en";
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k=el.getAttribute("data-i18n"); if(I18N[l][k]!==undefined){ el.innerHTML=I18N[l][k].replace(/\n/g,"<br>"); }
+    });
+    document.getElementById("btnEN").classList.toggle("active",l==="en");
+    document.getElementById("btnID").classList.toggle("active",l==="id");
+    document.getElementById("btnEN").setAttribute("aria-pressed",l==="en");
+    document.getElementById("btnID").setAttribute("aria-pressed",l==="id");
+    renderWorks(); renderMarquee();
+  }
+  document.getElementById("btnEN").addEventListener("click",function(){setLang("en")});
+  document.getElementById("btnID").addEventListener("click",function(){setLang("id")});
+
+  function setActiveNav(){
+    document.querySelectorAll("[data-nav]").forEach(function(a){
+      var on=a.getAttribute("data-nav")===currentPage;
+      a.classList.toggle("active",on);
+      if(on){ a.setAttribute("aria-current","page"); } else { a.removeAttribute("aria-current"); }
+    });
+  }
+
+  var io=null;
+  function initReveals(){
+    var els=main.querySelectorAll(".reveal:not(.in)");
+    if(!els.length) return;
+    if("IntersectionObserver" in window){
+      if(io) io.disconnect();
+      io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }); },{threshold:.05,rootMargin:"0px 0px 240px 0px"});
+      els.forEach(function(el){ io.observe(el); });
+      setTimeout(function(){ els.forEach(function(el){ el.classList.add("in"); }); },900);
+    } else {
+      els.forEach(function(el){ el.classList.add("in"); });
+    }
+  }
+  function initPage(){
+    setLang(lang);
+    setActiveNav();
+    initReveals();
+  }
+
+  function candidates(p){
+    var f=PAGES[p];
+    /* Root first: the canonical file next to index.html. The assets/
+       copy is only a fallback for preview builds that serve just
+       index.html plus the assets folder. */
+    return [f,"assets/"+f];
+  }
+  function fetchPage(p){
+    var urls=candidates(p).map(function(c){ return new URL(c,BASE).href; });
+    var i=0;
+    function tryNext(){
+      if(i>=urls.length) return Promise.resolve(null);
+      var u=urls[i++];
+      return fetch(u).then(function(r){
+        if(!r.ok) return tryNext();
+        return r.text().then(function(t){
+          var doc=new DOMParser().parseFromString(t,"text/html");
+          var m=doc.querySelector("main[data-pjax-root]");
+          if(!m||m.getAttribute("data-page")!==p) return tryNext();
+          var md=doc.querySelector('meta[name="description"]');
+          return {html:m.innerHTML, cls:m.getAttribute("class")||"", title:doc.title, desc:md?md.getAttribute("content"):""};
+        });
+      }).catch(function(){ return tryNext(); });
+    }
+    return tryNext();
+  }
+  function navigate(p,push){
+    if(!PAGES[p]) return;
+    if(p===currentPage){ window.scrollTo(0,0); return; }
+    main.classList.add("pjax-out");
+    fetchPage(p).then(function(data){
+      setTimeout(function(){
+        if(!data){ location.href=new URL(PAGES[p],BASE).href; return; }
+        main.innerHTML=data.html;
+        main.setAttribute("class",(data.cls?data.cls+" ":"")+"pjax-out");
+        main.setAttribute("data-page",p);
+        document.title=data.title;
+        if(data.desc){ var md=document.querySelector('meta[name="description"]'); if(md) md.setAttribute("content",data.desc); }
+        currentPage=p;
+        window.scrollTo(0,0);
+        initPage();
+        if(push){ try{ history.pushState({page:p},"", p==="index"?BASE:new URL(p,BASE).href); }catch(err){} }
+        void main.offsetWidth;
+        main.classList.remove("pjax-out");
+      }, reduceMotion?0:180);
+    });
+  }
+  function pageFromHref(href){
+    var f=(href||"").split("/").pop().split("?")[0].split("#")[0];
+    if(!f||f==="index.html") return "index";
+    var key=f.replace(/\.html$/,"");
+    return PAGES[key]?key:null;
+  }
+  function pageFromPath(path){
+    var seg=(path||"").split("/").filter(Boolean).pop()||"index";
+    seg=seg.replace(/\.html$/,"");
+    return PAGES[seg]?seg:"index";
+  }
+
+  var burger=document.getElementById("burger"), menu=document.getElementById("mobileMenu");
+  function closeMenu(){ menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.textContent="☰"; }
+  burger.addEventListener("click",function(){ var open=menu.classList.toggle("open"); burger.setAttribute("aria-expanded",open); burger.textContent=open?"✕":"☰"; });
+
+  document.addEventListener("click",function(e){
+    var a=e.target.closest?e.target.closest("a[data-pjax]"):null;
+    if(!a) return;
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||(e.button&&e.button!==0)) return;
+    var p=pageFromHref(a.getAttribute("href"));
+    if(!p) return;
+    e.preventDefault();
+    closeMenu();
+    navigate(p,true);
+  });
+  window.addEventListener("popstate",function(e){
+    var p=(e.state&&e.state.page)||pageFromPath(location.pathname);
+    if(p&&p!==currentPage){ navigate(p,false); }
+  });
+
+  // Nav scroll state
+  var nav=document.getElementById("nav");
+  window.addEventListener("scroll",function(){ nav.classList.toggle("scrolled",window.scrollY>30); },{passive:true});
+
+  // Parallax sculpture (pointer fine only, reduced motion respected)
+  document.addEventListener("mousemove",function(e){
+    if(reduceMotion||!window.matchMedia("(pointer: fine)").matches) return;
+    var s=document.getElementById("sculpt");
+    if(!s) return;
+    var x=(e.clientX/window.innerWidth-.5)*14, y=(e.clientY/window.innerHeight-.5)*10;
+    s.style.transform="translate("+x+"px,"+y+"px)";
+  });
+
+  // Contact form: composes a real email draft (no fake send)
+  document.addEventListener("submit",function(e){
+    if(e.target.id!=="contactForm") return;
+    e.preventDefault();
+    var name=document.getElementById("fName").value.trim(), email=document.getElementById("fEmail").value.trim(),
+        company=document.getElementById("fCompany").value.trim(), type=document.getElementById("fType").value,
+        msg=document.getElementById("fMsg").value.trim(), status=document.getElementById("formStatus");
+    if(!name||!email||!msg||email.indexOf("@")<0){
+      status.className="form-status show";
+      status.textContent = lang==="id" ? "Mohon isi nama, email yang valid, dan deskripsi proyek Anda." : "Please add your name, a valid email, and a short description of your project.";
+      return;
+    }
+    var subject=encodeURIComponent("[AIHARA] "+type+": "+name);
+    var body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\nCompany: "+company+"\nProject type: "+type+"\n\n"+msg);
+    var href="mailto:hello@aiharatech.com?subject="+subject+"&body="+body;
+    status.className="form-status show";
+    status.innerHTML = (lang==="id"
+      ? "Draf email Anda sudah siap. <a href=\""+href+"\">Buka di aplikasi email Anda →</a> untuk mengirim pertanyaan ke hello@aiharatech.com."
+      : "Your email draft is ready. <a href=\""+href+"\">Open it in your email app →</a> to send your inquiry to hello@aiharatech.com.");
+    window.location.href=href;
+  });
+
+  try{ history.replaceState({page:currentPage},""); }catch(err){}
+  initPage();
+})();
+</script>
+</body>
+</html>

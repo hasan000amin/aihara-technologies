@@ -233,6 +233,7 @@ footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-
     <div class="lang" role="group" aria-label="Language">
       <button type="button" id="btnEN" class="active" aria-pressed="true">EN</button>
       <button type="button" id="btnID" aria-pressed="false">ID</button>
+      <button type="button" id="btnJA" aria-pressed="false">JA</button>
     </div>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
@@ -325,6 +326,14 @@ footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-
     {v:"v5",cat:"INFRASTRUKTUR JARINGAN · STUDI KONSEPTUAL",t:"Core Network Design",d:"Konsep infrastruktur jaringan terstruktur: desain tersegmentasi, topologi terdokumentasi, dan pemantauan sejak hari pertama."},
     {v:"v6",cat:"TEKNOLOGI EKSPERIMENTAL · STUDI KONSEPTUAL",t:"Lab 06: Experiments",d:"Ruang konsep R&D internal untuk membuat prototipe interaksi, otomasi, dan gagasan antarmuka baru sebelum menjadi produk."}
   ];
+  var worksJA=[
+    {v:"v1",cat:"ソフトウェアプラットフォーム・コンセプトスタディ",t:"Meridian Platform",d:"モジュール型の業務プラットフォームのコンセプト。統合されたデータ、役割ベースのワークフロー、そして複雑なチームのための静かで編集的なインターフェース。"},
+    {v:"v2",cat:"モバイルアプリケーション・コンセプトスタディ",t:"Kanso App",d:"一つの考えを中心に据えたミニマルな生産性アプリのコンセプト。画面は少なく、判断は明確に、目的のない装飾は一切なし。"},
+    {v:"v3",cat:"モバイルゲーム・コンセプトスタディ",t:"Tenfall & Number Play",d:"オリジナルの数字パズルゲームのコンセプト。精密なメカニクス、プレミアムなダークプレゼンテーション、長時間のプレイを想定した進行システム。"},
+    {v:"v4",cat:"IOTプロジェクト・コンセプトスタディ",t:"Sentinel IoT",d:"MQTTテレメトリ、ライブダッシュボード、自動アラートを備えたコネクテッドデバイスのコンセプト。分散環境向け。"},
+    {v:"v5",cat:"ネットワークインフラストラクチャ・コンセプトスタディ",t:"Core Network Design",d:"構造化されたネットワークインフラのコンセプト。セグメント化された設計、文書化されたトポロジー、初日からのモニタリング。"},
+    {v:"v6",cat:"実験的テクノロジー・コンセプトスタディ",t:"Lab 06: Experiments",d:"プロダクトになる前に、新しいインタラクション、自動化、インターフェースのアイデアを試作する社内R&Dのコンセプトスペース。"}
+  ];
   var I18N={
     en:{nav_company:"COMPANY",nav_cap:"CAPABILITIES",nav_work:"WORK",nav_tech:"TECHNOLOGY",nav_contact:"CONTACT",
       hero_eyebrow:"INDEPENDENT TECHNOLOGY COMPANY",hero_h1a:"We build",hero_h1b:"the future,",hero_h1c:"one idea",hero_h1d:"at a time.",
@@ -383,7 +392,36 @@ footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-
       c_social:"SOSIAL",c_social_note:"Profil placeholder. Akun resmi akan ditautkan saat peluncuran.",c_resp:"RESPONS",c_resp_v:"Ceritakan apa yang Anda bangun, linimasanya, dan seperti apa keberhasilan menurut Anda. Semakin presisi brief-nya, semakin presisi balasannya.",
       f_name:"NAMA ANDA *",f_email:"EMAIL *",f_company:"PERUSAHAAN",f_type:"JENIS PROYEK",f_msg:"TENTANG PROYEK ANDA *",f_send:"KIRIM PERTANYAAN",
       o1:"Rekayasa Perangkat Lunak",o2:"Aplikasi Mobile",o3:"Game Mobile / Interaktif",o4:"Sistem & Infrastruktur TI",o5:"Lainnya",
-      rights:"SELURUH HAK CIPTA DILINDUNGI.",foot_made:"DIRANCANG & DIREKAYASA OLEH AIHARA",badge:"KONSEP"}
+      rights:"SELURUH HAK CIPTA DILINDUNGI.",foot_made:"DIRANCANG & DIREKAYASA OLEH AIHARA",badge:"KONSEP"},
+    ja:{nav_company:"会社概要",nav_cap:"事業内容",nav_work:"ワーク",nav_tech:"テクノロジー",nav_contact:"お問い合わせ",
+      hero_eyebrow:"独立系テクノロジーカンパニー",hero_h1a:"私たちは",hero_h1b:"未来を、",hero_h1c:"一つひとつのアイデアから",hero_h1d:"築く。",
+      hero_sub:"ソフトウェア、インタラクティブエンターテインメント、インテリジェントテクノロジーを通じて、デジタル体験をエンジニアリングします。",
+      cta_explore:"事業内容を見る",cta_talk:"お話ししましょう",hero_f1:"ソフトウェア・ゲーム・システム",hero_f2:"AIHARATECH.COM",
+      dir_label:"サイトインデックス",dir_h:"探索しよう。",
+      dir1_t:"会社概要",dir1_d:"目的を持ったテクノロジー。",
+      dir2_t:"事業内容",dir2_d:"ソフトウェア、モバイル、インタラクティブエンターテインメント、ITシステム。",
+      dir3_t:"ワーク",dir3_d:"選りすぐりのコンセプトスタディとプロダクトアイデア。",
+      dir4_t:"テクノロジー",dir4_d:"仕事を支える技術スタック。",
+      dir5_t:"お問い合わせ",dir5_d:"プロジェクトのご相談はこちらから。",
+      about_label:"私たちについて",about_h:"目的を持った\nテクノロジー。",
+      about_p1:"AIHARA Technologiesは、アイデアを意味のあるデジタル体験へと変えることに専念する独立系テクノロジーカンパニーです。",
+      about_p2:"私たちはソフトウェアエンジニアリング、創造的な思考、技術革新を組み合わせ、ビジネスと人々を前進させるプロダクトとソリューションを開発します。",
+      about_p3:"私たちは単なるソフトウェア開発会社ではありません。AIHARAは、デジタルプロダクト、インタラクティブ体験、インテリジェントシステムを築くテクノロジーブランドです。精密にエンジニアリングし、抑制を効かせてデザインします。",
+      pr1:"精密",pr2:"抑制",pr3:"職人技",pr4:"志",
+      cap_label:"事業内容",cap_h:"私たちの\n事業内容。",
+      cap1_t:"ソフトウェアエンジニアリング",cap1_d:"カスタムソフトウェア、ウェブプラットフォーム、バックエンドシステム、API、エンタープライズアプリケーション。保守、拡張、信頼に応える設計で構築します。",
+      cap2_t:"モバイル・デジタルアプリケーション",cap2_d:"使いやすさ、拡張性、実機でのパフォーマンスを重視して設計された、モダンなモバイルアプリケーションとデジタルプロダクト。",
+      cap3_t:"インタラクティブエンターテインメント",cap3_d:"モバイルゲーム開発、インタラクティブ体験、そして独自のアイデンティティを持つオリジナルのデジタルエンターテインメントプロダクト。",
+      cap4_t:"ITシステム・インフラストラクチャ",cap4_d:"ITコンサルティング、ネットワークインフラ、クラウドシステム、サイバーセキュリティ、そしてシステムに依存する組織のためのテクニカルサポート。",
+      work_label:"厳選ワーク",work_h:"アイデアを\n現実に変える。",work_note:"注記: 上記のワークは、AIHARAが設計・構築するプロダクトの種類を示すコンセプトスタディです。クライアントワークや商用リリースとして提示するものではありません。",
+      tech_label:"テクノロジー",tech_h:"精密に\nエンジニアリング。",tech1:"ソフトウェア",tech2:"モバイル",tech3:"インフラストラクチャ",tech4:"先端技術",
+      phil_label:"企業理念",phil_a:"境界の先を考える。",phil_b:"境界の先を築く。",phil_p:"イノベーションとは、単に私たちが創り出すものではありません。それは私たちの考え方であり、エンジニアリングの仕方であり、次に来るものを形作る方法です。",
+      contact_label:"お問い合わせ",contact_h:"次なるものを\n共に創りましょう。",contact_sub:"アイデア、課題、ビジョンをお持ちですか。共に意味のあるものを築きましょう。",
+      c_email:"ビジネスメール",c_email_note:"プレースホルダーのアドレスです。公開前にアクティブなビジネス用受信箱に置き換えてください。",c_li_note:"プレースホルダーのリンクです。公開前に公式の会社ページを接続してください。",
+      c_social:"ソーシャル",c_social_note:"プレースホルダーのプロフィールです。公式アカウントは公開時にリンクされます。",c_resp:"返信",c_resp_v:"何を構築しているのか、スケジュール、成功の姿をお聞かせください。ブリーフが具体的であるほど、返信も具体的になります。",
+      f_name:"お名前 *",f_email:"メールアドレス *",f_company:"会社名",f_type:"プロジェクトの種類",f_msg:"プロジェクトについて *",f_send:"お問い合わせを送信",
+      o1:"ソフトウェアエンジニアリング",o2:"モバイルアプリケーション",o3:"モバイルゲーム / インタラクティブ",o4:"ITシステム・インフラストラクチャ",o5:"その他",
+      rights:"全著作権所有。",foot_made:"AIHARAによるデザインとエンジニアリング",badge:"コンセプト"}
   };
 
   /* PJAX router: one full HTML file per page, all at the project root
@@ -414,7 +452,7 @@ footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-
   function renderWorks(){
     var grid=document.getElementById("worksGrid");
     if(!grid) return;
-    var list = lang==="id"?worksID:worksEN;
+    var list = lang==="ja"?worksJA:(lang==="id"?worksID:worksEN);
     grid.innerHTML = list.map(function(w){
       return '<article class="work reveal in"><div class="visual '+w.v+'"><span class="badge">'+I18N[lang].badge+'</span></div><div class="meta"><div class="cat">'+w.cat+'</div><h3>'+w.t+'</h3><p>'+w.d+'</p></div></article>';
     }).join("");
@@ -422,23 +460,26 @@ footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-
   function renderMarquee(){
     var track=document.getElementById("marqueeTrack");
     if(!track) return;
-    var phrase = lang==="id" ? "MELAMPAUI BATAS DIGITAL" : "BEYOND DIGITAL BOUNDARIES";
+    var phrase = lang==="ja" ? "デジタルの境界を超えて" : (lang==="id" ? "MELAMPAUI BATAS DIGITAL" : "BEYOND DIGITAL BOUNDARIES");
     var chunk=""; for(var i=0;i<6;i++){ chunk+="<span>"+phrase+"</span><span class='dot'>◆</span>"; }
     track.innerHTML=chunk+chunk;
   }
   function setLang(l){
-    lang=l; document.documentElement.lang = l==="id"?"id":"en";
+    lang=l; document.documentElement.lang = l;
     document.querySelectorAll("[data-i18n]").forEach(function(el){
       var k=el.getAttribute("data-i18n"); if(I18N[l][k]!==undefined){ el.innerHTML=I18N[l][k].replace(/\n/g,"<br>"); }
     });
     document.getElementById("btnEN").classList.toggle("active",l==="en");
     document.getElementById("btnID").classList.toggle("active",l==="id");
+    document.getElementById("btnJA").classList.toggle("active",l==="ja");
     document.getElementById("btnEN").setAttribute("aria-pressed",l==="en");
     document.getElementById("btnID").setAttribute("aria-pressed",l==="id");
+    document.getElementById("btnJA").setAttribute("aria-pressed",l==="ja");
     renderWorks(); renderMarquee();
   }
   document.getElementById("btnEN").addEventListener("click",function(){setLang("en")});
   document.getElementById("btnID").addEventListener("click",function(){setLang("id")});
+  document.getElementById("btnJA").addEventListener("click",function(){setLang("ja")});
 
   function setActiveNav(){
     document.querySelectorAll("[data-nav]").forEach(function(a){
@@ -563,16 +604,18 @@ footer{background:var(--obsidian);padding:70px clamp(18px,4vw,56px) 34px;border-
         msg=document.getElementById("fMsg").value.trim(), status=document.getElementById("formStatus");
     if(!name||!email||!msg||email.indexOf("@")<0){
       status.className="form-status show";
-      status.textContent = lang==="id" ? "Mohon isi nama, email yang valid, dan deskripsi proyek Anda." : "Please add your name, a valid email, and a short description of your project.";
+      status.textContent = lang==="ja" ? "お名前、有効なメールアドレス、プロジェクトの概要をご入力ください。" : (lang==="id" ? "Mohon isi nama, email yang valid, dan deskripsi proyek Anda." : "Please add your name, a valid email, and a short description of your project.");
       return;
     }
     var subject=encodeURIComponent("[AIHARA] "+type+": "+name);
     var body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\nCompany: "+company+"\nProject type: "+type+"\n\n"+msg);
     var href="mailto:hello@aiharatech.com?subject="+subject+"&body="+body;
     status.className="form-status show";
-    status.innerHTML = (lang==="id"
+    status.innerHTML = (lang==="ja"
+      ? "メールの下書きができました。<a href=\""+href+"\">メールアプリで開く →</a> hello@aiharatech.com へお問い合わせを送信してください。"
+      : (lang==="id"
       ? "Draf email Anda sudah siap. <a href=\""+href+"\">Buka di aplikasi email Anda →</a> untuk mengirim pertanyaan ke hello@aiharatech.com."
-      : "Your email draft is ready. <a href=\""+href+"\">Open it in your email app →</a> to send your inquiry to hello@aiharatech.com.");
+      : "Your email draft is ready. <a href=\""+href+"\">Open it in your email app →</a> to send your inquiry to hello@aiharatech.com."));
     window.location.href=href;
   });
 

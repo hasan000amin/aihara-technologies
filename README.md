@@ -1,6 +1,6 @@
-# AIHARA TECHNOLOGIES
+# AIHARA SEKAI TECHNOLOGY
 
-Corporate website for **AIHARA Technologies** — an independent technology company building software, mobile applications, interactive entertainment, and IT infrastructure.
+Corporate website for **AIHARA SEKAI TECHNOLOGY** — an independent technology company building software, mobile applications, interactive entertainment, and IT infrastructure.
 
 Live site: https://hasan000amin.github.io/aihara-technologies/
 
